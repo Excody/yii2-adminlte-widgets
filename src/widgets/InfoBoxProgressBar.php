@@ -52,13 +52,14 @@ class InfoBoxProgressBar extends InfoBox
      */
     protected function renderBoxContent()
     {
-        $boxContent = parent::renderBoxContent();
+        $textContainer = $this->renderTextContainer();
+        $numberContainer = $this->renderNumberContainer();
         $progressTags = $this->renderProgressTags();
         $infoBox = Html::tag(
             'div',
-            $boxContent.$progressTags,
+            $textContainer.$numberContainer.$progressTags,
             [
-                'class' => 'info-box',
+                'class' => 'info-box-content',
             ]
         );
         return $infoBox;
