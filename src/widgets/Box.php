@@ -63,9 +63,6 @@ class Box extends Widget
     public function init()
     {
         parent::init();
-        if (!isset($this->options['id'])) {
-            $this->options['id'] = $this->getId();
-        }
         ob_start();
         ob_implicit_flush(false);
     }
@@ -82,7 +79,7 @@ class Box extends Widget
         $footer = $this->renderFooter();
 
         $html = Html::tag('div', $header.$body.$overlay.$footer, [
-            'class' => ['box', $this->getBoxClasses()]
+            'class' => $this->getBoxClasses()
         ]);
 
         return $html;
@@ -92,7 +89,7 @@ class Box extends Widget
      * @return array
      */
     protected function getBoxClasses() {
-        $default = ['box box-default'];
+        $default = ['box'];
         $added = $this->boxContainerClasses;
         return ArrayHelper::merge($default, $added);
     }
