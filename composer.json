@@ -1,0 +1,26 @@
+{
+    "name": "excody/yii2-adminlte-widgets",
+    "description": "Adminlte widgets for yii2",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "version": "0.0.1",
+    "keywords": [
+        "yii2", "module", "widgets", "adminlte", "adminlte2"
+    ],
+    "authors": [
+        {
+            "name": "Excody",
+            "email": "kalinasweb@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "~2"
+    },
+    "autoload": {
+        "psr-4": {
+            "excody\\adminltewidgets\\": "src/"
+        }
+    }
+}
