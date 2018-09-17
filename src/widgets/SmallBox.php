@@ -53,7 +53,7 @@ class SmallBox extends Widget
      */
     protected function renderLink() {
         return Html::a(
-            $this->urlText.$this->urlIcon,
+            $this->urlText.' '.$this->urlIcon,
             $this->url,
             ['class' => ['small-box-footer']]
         );
